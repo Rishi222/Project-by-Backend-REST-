@@ -3,6 +3,9 @@ const app=express();                           //set app via express.
 const port=8080;                              //use port -> 8080.  
 const path=require("path");
 const { v4: uuidv4 } = require("uuid");
+const method_override=require('method-override');
+
+app.use(method_override('method'));
 
 app.listen(port,()=>{
     console.log(`Port is listening at ${port}`);            // print the port status.
@@ -61,3 +64,22 @@ app.get("/posts/:id",(req,res)=>{
 
 // create some random id to make the posts diff from each.
 // use npm's uuid package.
+
+// create a update path use patch or put method ------->       /posts/:id
+
+app.patch("ports/:id",(req,res)=>{
+    let {id}=req.params;
+    let newCont=req.body.content;
+    let post=posts.find((p)=>id === p.id);
+    post.content=newCont;
+    res.redirect("/posts");
+})
+
+// create a edit route for all posts ------->        /posts/:id/edit
+
+app.get("/posts/:id/edit",(req,res)=>{
+    let {id}=req.params;
+    let post = posts.find((p) => id === p.id);
+    res.render("edit.ejs",{post});
+});
+
