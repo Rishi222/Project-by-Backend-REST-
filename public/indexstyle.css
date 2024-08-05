@@ -2,7 +2,7 @@
     background-color: antiquewhite;
 }
 .maindiv{
-    /* background-color: white; */
+    /* no content */
 }
 .heading{
     text-align: center;
@@ -45,4 +45,8 @@
 a{
     text-decoration: none;
     color: black;
+}
+.creatediv{
+    margin-left: 20px;
+    margin-top: 5px;
 }

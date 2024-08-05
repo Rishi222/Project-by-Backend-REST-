@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Main file for views</title>
-    <link rel="stylesheet" href="styleindex.css">
+    <link rel="stylesheet" href="indexstyle.css">
 </head>
 <body class="body">
+    <p>Hi <u>Rishi Sharma</u> ;)</p>
+    <h3>This are your all posts project</h3>
     <div class="maindiv">
-        <h1 class="heading">Posts</h1>
+        <h1 class="heading">All Posts</h1>
         <div class="postsdivouter">
             <% for(post of posts){ %>
             <div class="postsdivinner">
@@ -19,9 +21,11 @@
             </div>
             <% } %>
             <div class="buttondiv">
-                <button class="button"><a href="http://localhost:8080/posts/new">Create New Post</a></button>
                 <button class="button"><a href="http://localhost:8080/posts/<%= post.id %>">Details</a></button>
             </div>
+        </div>
+        <div class="creatediv">
+            <button class="button"><a href="http://localhost:8080/posts/new">Create New Post</a></button>
         </div>
     </div>
 </body>

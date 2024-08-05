@@ -1,0 +1,34 @@
+.body{
+    background-color: antiquewhite;
+}
+.heading{
+    text-align: center;
+    color: maroon;
+    text-decoration: underline;
+}
+.iddiv{
+    margin-left: 20px;
+    text-decoration: underline;
+}
+.username{
+    margin-left: 20px;
+}
+.postsdivouter{
+    border: 1px solid black;
+    border-radius:15px ;
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: white;
+    padding-bottom: 50px;
+}
+.contentdiv{
+    border: 1px solid black;
+    margin-right: 20px;
+    margin-left: 20px;
+    text-align:start;
+    border-radius: 15px;
+}
+.h4{
+    margin-left: 10px;
+    padding-bottom: 20px;
+}

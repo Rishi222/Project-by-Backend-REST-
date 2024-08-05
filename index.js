@@ -2,6 +2,7 @@ const express=require ("express");              //require express.
 const app=express();                           //set app via express.
 const port=8080;                              //use port -> 8080.  
 const path=require("path");
+const { v4: uuidv4 } = require("uuid");
 
 app.listen(port,()=>{
     console.log(`Port is listening at ${port}`);            // print the port status.
@@ -25,7 +26,7 @@ app.use(express.static(path.join(__dirname,"public")));         // set the local
 // create a dummy server.
 let posts=[
     {
-        id:uuid,
+        id:uuidv4(),
         username:"Demo_user",
         content:"Demo_content",
     },
@@ -45,7 +46,8 @@ app.get("/posts/new",(req,res)=>{
 
 app.post("/posts",(req,res)=>{
     let {username,content}=req.body;
-    posts.push({username,content});
+    let id=uuidv4();
+    posts.push({id,username,content});
     res.redirect("/posts");
 });
 
@@ -56,3 +58,6 @@ app.get("/posts/:id",(req,res)=>{
     let post=posts.find((p)=>id===p.id);
     res.render("show.ejs",{post});
 })
+
+// create some random id to make the posts diff from each.
+// use npm's uuid package.
