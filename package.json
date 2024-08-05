@@ -1,0 +1,19 @@
+{
+  "name": "backend-by-rest.",
+  "version": "1.0.0",
+  "description": "This poject is made with the concept of crud operations in backend.",
+  "main": "index.js",
+  "scripts": {
+    "test": "no"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rishi222/Project-by-Backend-REST-.git"
+  },
+  "author": "Rishi Sharma",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rishi222/Project-by-Backend-REST-/issues"
+  },
+  "homepage": "https://github.com/Rishi222/Project-by-Backend-REST-#readme"
+}
