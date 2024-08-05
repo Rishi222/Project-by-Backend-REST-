@@ -32,6 +32,7 @@ let posts=[
 ]
 
 //create a route for ------>   /posts
+
 app.get("/posts",(req,res)=>{
-    res.render("index.ejs",{ports});                // send posts or render ejs files.
+    res.render("index.ejs",{posts});                // send posts or render ejs files.
 })

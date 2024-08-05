@@ -4,14 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Main file for views</title>
+    <link rel="stylesheet" href="styleindex.css">
 </head>
-<body>
-    <h1>Posts</h1>
-    <% for(post of posts){ %>
-        <div>
-            <h5>@<%= post.username %></h5>
-            <h4><%= post.content %></h4>
+<body class="body">
+    <div class="maindiv">
+        <h1 class="heading">Posts</h1>
+        <div class="postsdivouter">
+            <% for(post of posts){ %>
+            <div class="postsdivinner">
+                <h2 class="username">@<%= post.username %></h2>
+                <h4><%= post.content %></h4>
+            </div>
+            <% } %>
         </div>
-    <% } %>
+    </div>
 </body>
 </html>
