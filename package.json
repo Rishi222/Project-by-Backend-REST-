@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Rishi222/Project-by-Backend-REST-/issues"
   },
-  "homepage": "https://github.com/Rishi222/Project-by-Backend-REST-#readme"
+  "homepage": "https://github.com/Rishi222/Project-by-Backend-REST-#readme",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
 }
