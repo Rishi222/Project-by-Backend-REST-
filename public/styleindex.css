@@ -2,7 +2,7 @@
     background-color: antiquewhite;
 }
 .maindiv{
-    background-color: white;
+    /* background-color: white; */
 }
 .heading{
     text-align: center;
@@ -14,7 +14,11 @@
     border-radius:15px ;
     margin-left: 20px;
     margin-right: 20px;
+    background-color: white;
 }
 .postsdivinner{
     margin-left: 20px;
+}
+.username{
+    font-style: italic;
 }

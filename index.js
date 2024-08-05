@@ -31,8 +31,20 @@ let posts=[
     },
 ]
 
-//create a route for ------>   /posts
+//create a route for all posts ------>   /posts
 
 app.get("/posts",(req,res)=>{
     res.render("index.ejs",{posts});                // send posts or render ejs files.
 })
+
+// create a route for new posts ------>     /posts/new
+
+app.get("/posts/new",(req,res)=>{
+    res.render("new.ejs");
+});
+
+app.post("/posts",(req,res)=>{
+    let {username,content}=req.body;
+    posts.push({username,content});
+    res.send("req send");
+});
