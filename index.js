@@ -18,6 +18,20 @@ app.use(express.static(path.join(__dirname,"public")));         // set the local
 
 // Check server
 
-app.get("/",(req,res)=>{
-    res.send("Server working well !");
-});
+// app.get("/",(req,res)=>{
+//     res.send("Server working well !");
+// });
+
+// create a dummy server.
+let posts=[
+    {
+        id:null,
+        username:"Demo_user",
+        content:"Demo_content",
+    },
+]
+
+//create a route for ------>   /posts
+app.get("/posts",(req,res)=>{
+    res.render("index.ejs",{ports});                // send posts or render ejs files.
+})
