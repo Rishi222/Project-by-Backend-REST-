@@ -25,7 +25,7 @@ app.use(express.static(path.join(__dirname,"public")));         // set the local
 // create a dummy server.
 let posts=[
     {
-        id:null,
+        id:uuid,
         username:"Demo_user",
         content:"Demo_content",
     },
@@ -46,5 +46,13 @@ app.get("/posts/new",(req,res)=>{
 app.post("/posts",(req,res)=>{
     let {username,content}=req.body;
     posts.push({username,content});
-    res.send("req send");
+    res.redirect("/posts");
 });
+
+// create a route to show individual posts ------>      /posts/:id
+
+app.get("/posts/:id",(req,res)=>{
+    let {id}=req.params;
+    let post=posts.find((p)=>id===p.id);
+    res.render("show.ejs",{post});
+})

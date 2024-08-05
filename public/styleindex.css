@@ -18,7 +18,31 @@
 }
 .postsdivinner{
     margin-left: 20px;
+    margin-bottom: 5px;
 }
 .username{
     font-style: italic;
+}
+.contentdiv{
+    border: 1px solid black;
+    margin-right: 20px;
+    text-align:start;
+    border-radius: 15px;
+}
+.h4{
+    margin-left: 10px;
+}
+.buttondiv{
+    margin-left: 15px;
+    padding-bottom: 10px;
+}
+.button{
+    padding-bottom: 6px;
+    padding-top: 6px;
+    border-radius: 15px;
+    background-color: cornsilk;
+}
+a{
+    text-decoration: none;
+    color: black;
 }
