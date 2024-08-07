@@ -5,13 +5,13 @@ const path=require("path");
 const { v4: uuidv4 } = require("uuid");
 const method_override=require('method-override');
 
-app.use(method_override('method'));
+// middleware important.
+app.use(method_override('_method'));
+app.use(express.urlencoded({extended:true}));               // use to decript the input or
 
 app.listen(port,()=>{
     console.log(`Port is listening at ${port}`);            // print the port status.
-});
-
-app.use(express.urlencoded({extended:true}));               // use to decript the input or 
+}); 
 
 app.set("view engine","ejs");                               // set the view engine.
 
@@ -39,7 +39,7 @@ let posts=[
 
 app.get("/posts",(req,res)=>{
     res.render("index.ejs",{posts});                // send posts or render ejs files.
-})
+});
 
 // create a route for new posts ------>     /posts/new
 
@@ -49,7 +49,9 @@ app.get("/posts/new",(req,res)=>{
 
 app.post("/posts",(req,res)=>{
     let {username,content}=req.body;
+    console.log(username,content);          //check   ok
     let id=uuidv4();
+    console.log(id);                        //check   ok
     posts.push({id,username,content});
     res.redirect("/posts");
 });
@@ -58,20 +60,26 @@ app.post("/posts",(req,res)=>{
 
 app.get("/posts/:id",(req,res)=>{
     let {id}=req.params;
-    let post=posts.find((p)=>id===p.id);
+    console.log(id);                    // check    ok
+    let post=posts.find((p)=> id === p.id);
+    console.log(post);                  // check    ok
     res.render("show.ejs",{post});
-})
+});
 
 // create some random id to make the posts diff from each.
 // use npm's uuid package.
 
 // create a update path use patch or put method ------->       /posts/:id
 
-app.patch("ports/:id",(req,res)=>{
+app.patch("/posts/:id",(req,res)=>{
     let {id}=req.params;
     let newCont=req.body.content;
     let post=posts.find((p)=>id === p.id);
+    // console.log(post);
+    // console.log("content before patch", post.content);
+    // console.log("new content for patch",newCont);
     post.content=newCont;
+    // console.log("content after patch",post.content);
     res.redirect("/posts");
 })
 
@@ -82,4 +90,3 @@ app.get("/posts/:id/edit",(req,res)=>{
     let post = posts.find((p) => id === p.id);
     res.render("edit.ejs",{post});
 });
-
