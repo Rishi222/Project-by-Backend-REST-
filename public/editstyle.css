@@ -1,0 +1,39 @@
+.body{
+    background-color: antiquewhite;
+}
+.heading{
+    text-align: center;
+    color: maroon;
+    text-decoration: underline;
+}
+.postsdivouter{
+    border: 1px solid black;
+    border-radius:15px ;
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: white;
+}
+.iddiv{
+    margin-left: 20px;
+    text-decoration: underline;
+}
+.username{
+    margin-left: 20px;
+}
+.contentdiv{
+    border: 1px solid black;
+    margin-right: 20px;
+    margin-left: 20px;
+    text-align: center;
+    font-size: large;
+    border-radius: 15px;
+}
+.button{
+    padding-bottom: 6px;
+    padding-top: 6px;
+    margin-left: 15px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    background-color: cornsilk;
+}
