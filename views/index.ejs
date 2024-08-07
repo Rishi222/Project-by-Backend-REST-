@@ -8,21 +8,29 @@
 </head>
 <body class="body">
     <p>Hi <u>Rishi Sharma</u> ;)</p>
-    <h3>This are your all posts project</h3>
+    <h3>Post Project With Express,Node.js,( REST Api method : CRUD )</h3>
+    <h5>GET , POST , PUT , PATCH , DELETE</h5>
     <div class="maindiv">
         <h1 class="heading">Posts</h1>
         <div class="postsdivouter">
             <% for(post of posts){ %>
             <div class="postsdivinner">
                 <h2 class="username">@<%= post.username %></h2>
+                <div class="buttondiv">
+                    <button class="button" ><a href="http://localhost:8080/posts/<%= post.id %>">Details</a></button>
+                    <button class="button" ><a href="http://localhost:8080/posts/<%= post.id %>/edit">Edit Post</a></button>
+                </div>
                 <div class="contentdiv">
                     <h4 class="h4"><%= post.content %></h4>
                 </div>
             </div>
-            <% } %>
-            <div class="buttondiv">
-                <button class="button"><a href="http://localhost:8080/posts/<%= post.id %>">Details</a></button>
+            
+            <div>
+                <form method="post" action="/posts/<%= post.id %>?_method=DELETE">
+                    <button class="button" style="color: black; margin-left: 35px; margin-bottom: 10px;">Delete Post</button>
+                </form>
             </div>
+            <% } %>
         </div>
         <div class="creatediv">
             <button class="button"><a href="http://localhost:8080/posts/new">Create New Post</a></button>

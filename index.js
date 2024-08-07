@@ -49,9 +49,9 @@ app.get("/posts/new",(req,res)=>{
 
 app.post("/posts",(req,res)=>{
     let {username,content}=req.body;
-    console.log(username,content);          //check   ok
+    // console.log(username,content);          //check   ok
     let id=uuidv4();
-    console.log(id);                        //check   ok
+    // console.log(id);                        //check   ok
     posts.push({id,username,content});
     res.redirect("/posts");
 });
@@ -60,9 +60,9 @@ app.post("/posts",(req,res)=>{
 
 app.get("/posts/:id",(req,res)=>{
     let {id}=req.params;
-    console.log(id);                    // check    ok
+    // console.log(id);                    // check    ok
     let post=posts.find((p)=> id === p.id);
-    console.log(post);                  // check    ok
+    // console.log(post);                  // check    ok
     res.render("show.ejs",{post});
 });
 
@@ -89,4 +89,12 @@ app.get("/posts/:id/edit",(req,res)=>{
     let {id}=req.params;
     let post = posts.find((p) => id === p.id);
     res.render("edit.ejs",{post});
+});
+
+// create a destroy route to delete the posts -------->         /posts/:id
+
+app.delete("/posts/:id",(req,res)=>{
+    let { id } = req.params;
+    posts=posts.filter((p)=>id !== p.id);
+    res.redirect("/posts");
 });

@@ -19,7 +19,7 @@
     margin-left: 20px;
     margin-right: 20px;
     background-color: white;
-    padding-bottom: 50px;
+    padding-bottom: 20px;
 }
 .contentdiv{
     border: 1px solid black;
@@ -31,4 +31,16 @@
 .h4{
     margin-left: 10px;
     padding-bottom: 20px;
+}
+.button{
+    padding-bottom: 6px;
+    padding-top: 6px;
+    margin-left: 15px;
+    margin-top: 15px;
+    border-radius: 15px;
+    background-color: cornsilk;
+}
+a{
+    margin: 5px 5px 5px 5px;
+    text-decoration: none;
 }
