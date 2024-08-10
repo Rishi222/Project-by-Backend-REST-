@@ -98,3 +98,7 @@ app.delete("/posts/:id",(req,res)=>{
     posts=posts.filter((p)=>id !== p.id);
     res.redirect("/posts");
 });
+
+app.get("/about",(req,res)=>{
+    res.render("about.ejs");
+})

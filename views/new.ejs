@@ -12,13 +12,20 @@
         <form method="post" action="/posts">
             <div class="contentdiv">
                 <div class="username">
-                    <label for="username">Enter the Username</label>
-                    <input id="username" name="username" type="text" placeholder="Username">
+                    <label for="username"><h2>Enter the Username</h2></label>
+                    <div>
+                        <input class="inputuser" id="username" name="username" type="text" placeholder="Username">
+                    </div>
                 </div>
-                <br><br>
-                <textarea name="content" id="content" placeholder="Enter your Content here"></textarea>
                 <br>
-                <button type="submit"> New Post </button>
+                <div class="contentdivinner">
+                    <label for="content"><h2>Content</h2></label>
+                    <textarea name="content" id="content" placeholder="Enter your Content here" rows="10" cols="60"></textarea>
+                </div>
+                <br>
+                <div class="buttondiv">
+                    <button class="button" type="submit">Make Post </button>
+                </div>
             </div>
         </form>
     </div>

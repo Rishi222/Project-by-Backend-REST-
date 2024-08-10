@@ -15,4 +15,28 @@ body{
 }
 .username{
     margin-left: 20px;
+    text-align: center;
+}
+.inputuser{
+    border: 1px solid black;
+    border-radius: 5px;
+    padding-top:5px;
+    padding-left: 9%;
+    padding-bottom: 6px;
+}
+.contentdivinner{
+    text-align: center;
+}
+textarea{
+    border: 1px solid black;
+}
+.buttondiv{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.button{
+    padding-bottom: 6px;
+    padding-top: 6px;
+    border-radius: 15px;
+    background-color: cornsilk;
 }
