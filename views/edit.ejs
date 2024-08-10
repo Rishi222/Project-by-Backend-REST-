@@ -15,7 +15,7 @@
         <h2 class="username">Post Username : @<%= post.username %></h2>
         <div>
             <form action="/posts/<%= post.id %>?_method=PATCH" method="post">
-                <textarea class="contentdiv" name="content" id="content" cols="122" rows="6"><%= post.content %></textarea>
+                <textarea class="contentdiv" name="content" id="content" cols="106" rows="6"><%= post.content %></textarea>
                 <button type="submit" class="button">Edit Post</button>
             </form>
         </div> 

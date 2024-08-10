@@ -1,7 +1,7 @@
 body{
     text-align: center;
 }
-h1{
+.heading{
     text-decoration: underline;
     padding-top: 20px;
 }
